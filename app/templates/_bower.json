@@ -1,0 +1,23 @@
+{
+  "name": "<%= repoName %>",
+  "main": "<%= repoName %>.js",
+  "version": "0.0.0",
+  "description": "Hello world can.Component example",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "webcomponents",
+    "canjs",
+    "can.component",
+    "common-component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "canjs": "gthrive/canjs#gthrive",
+    "component-utils": "bitovi-components/component-utils",
+    "steal": "bitovi/steal#minor",
+    "jquery": "~2.1.1",
+    "mocha": "~2.0.1"
+  }
+}

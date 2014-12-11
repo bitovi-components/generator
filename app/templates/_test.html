@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title><%= repoName %> test</title>
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="test-area"></div>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script>mocha.setup("bdd");</script>
+    <script src="bower_components/traceur/traceur.js"></script>
+    <script src="bower_components/steal/steal.js"
+        config-path="stealconfig.js">
+    </script>
+    <script>
+      System.import("./test/test").then(function() {
+        if (window.Testee) {
+          window.Testee.init();
+        }
+        mocha.checkLeaks();
+        mocha.run();
+      });
+    </script>
+  </body>
+</html>

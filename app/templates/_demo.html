@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title><%= repoName %> demo</title>
+    </head>
+    <body>
+        <script scope-greeting="Hi"
+                scope-target="You"
+                type="text/stache"
+                autoload>
+            <ul>
+                <li>
+                    <<%= repoName %>></<%= repoName %>>
+                <li>
+                    <<%= repoName %> greeting="{greeting}" target="Bitovi" excited></<%= repoName %>>
+                <li>
+                    <<%= repoName %> greeting="{greeting}" target="{target}">
+                        Name: <input value="World" can-value="{target}">
+                    </<%= repoName %>>
+            </ul>
+            <button type="button" can-click="{attr 'greeting' 'Meh'}">
+                Do something boring
+            </button>
+        </script>
+        <script src="bower_components/steal/steal.js"
+                config-path="stealconfig.js"></script>
+        <script src="dist/demo-loader.js"></script>
+    </body>
+</html>

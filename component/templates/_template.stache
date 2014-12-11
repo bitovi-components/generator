@@ -1,0 +1,6 @@
+<h1 can-click="{greet}">
+  {{greeting}} {{target}}{{#if excited}}!!!{{else}}!{{/if}}
+</h1>
+<div class="<%= tagName %>-content">
+  <content></content>
+</div>
